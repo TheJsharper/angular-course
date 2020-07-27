@@ -17,6 +17,9 @@ export class CourseCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  isBeginner(): { [key: string]: boolean } {
+    return { 'beginner': this.course.category == 'BEGINNER' }
+  }
 
   onCouseViewed(): void {
     this.selectedCourse.emit(this.course);
