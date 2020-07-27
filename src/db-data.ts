@@ -1,5 +1,6 @@
 import { Course } from './app/model/course';
 //iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png',
+//category: 'BEGINNER'
 
 export const COURSES: Course[] = [
 undefined,
@@ -64,7 +65,7 @@ undefined,
         description: 'Complete Typescript Course',
         longDescription: "Complete Guide to Typescript From Scratch: Learn the language in-depth and use it to build a Node REST API.",
         iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png',
-        category: 'BEGINNER'
+        
     },
     {
         id: 9,
