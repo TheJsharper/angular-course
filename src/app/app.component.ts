@@ -12,6 +12,9 @@ export class AppComponent {
   firstCourse: Course = COURSES[0];
 
   startDate: Date = new Date(2000, 0, 1);
+  constructor(){
+    this.firstCourse = COURSES[0];
+  }
 
 
   selectedCourse(course: Course): void {
