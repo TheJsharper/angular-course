@@ -9,11 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   courses: Course[] = COURSES;
+  firstCourse: Course = COURSES[0];
+
+  startDate: Date = new Date(2000, 0, 1);
 
 
-
-
-  selectedCourse(course:Course): void {
+  selectedCourse(course: Course): void {
     console.log("Course selection", course);
   }
 
