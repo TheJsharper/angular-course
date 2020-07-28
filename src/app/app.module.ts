@@ -4,17 +4,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-  //  CourseCardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
+    MatMenuModule,
+    MatButtonModule,
     AppRoutingModule
   ],
   providers: [],

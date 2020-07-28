@@ -16,6 +16,22 @@
               
               
         </mat-expansion-panel>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header >
+                <mat-panel-title >
+                    <h3 style="text-align: right;">Intermediate</h3>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+    
+            <mat-selection-list #shoes [multiple]="false" (selectionChange)="selectItem($event)">
+                <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+                  {{shoe}}
+                </mat-list-option>
+              </mat-selection-list>
+              
+              
+        </mat-expansion-panel>
     
     </mat-accordion> 
 

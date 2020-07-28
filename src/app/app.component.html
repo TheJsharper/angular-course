@@ -1,14 +1,22 @@
 <div class="top-menu">
 
-    <img class="logo"
-         src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+  <div style="flex-grow: 1;">
+    <img class="logo" src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+  </div>
+  
 
+  <div class="menu">
+    <button mat-button [matMenuTriggerFor]="aboveMenu" style="color: white; font-size: x-large;">Views</button>
+  
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+  
+      <button mat-menu-item [routerLink]="['/list']">List</button>
+      <button mat-menu-item [routerLink]="['/tree']">Tree</button>
+    </mat-menu>
+  </div>
 </div>
 
 
 
-<!--<h1 class="title">Angular Router</h1>
-<nav>
-  <a [routerLink]="['']">Tree Container</a>
-</nav>-->
+
 <router-outlet></router-outlet>
