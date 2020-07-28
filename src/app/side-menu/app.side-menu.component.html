@@ -1,0 +1,34 @@
+<div style="display: flex; margin-left: 1px; margin-right: 1px;">
+
+    <mat-accordion class="example-headers-align" style="flex-grow:3">   
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Personal data
+                </mat-panel-title>
+                <mat-panel-description>
+                    Type your name and age
+                    <mat-icon>account_circle</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <!--<courses></courses>-->
+    
+            <mat-selection-list #shoes [multiple]="false">
+                <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+                  {{shoe}}
+                </mat-list-option>
+              </mat-selection-list>
+              
+              <p>
+                Option selected: {{shoes.selectedOptions.selected[0]?.value}}
+              </p>
+        </mat-expansion-panel>
+    
+    </mat-accordion> 
+
+    <div style="flex-grow:10; background-color: red;">
+
+    </div>
+
+
+</div>
