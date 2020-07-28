@@ -1,8 +1,16 @@
 import { Component } from '@angular/core';
+import { MatSelectionListChange } from '@angular/material/list';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
     selector:'side-menu',
     templateUrl:'./app.side-menu.component.html'
 })
 export class AppSideMenuComponent{
-    typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
+    typesOfShoes: string[] = ['pipe', 'component', 'directives', 'views-encapsulation', 'services'];
+    constructor(private router:Router, private route:ActivatedRoute){}
+
+    selectItem(sel:MatSelectionListChange ):void{
+        console.log("==>", sel.option.value, this.route);
+        this.router.navigate([`${sel.option.value}`], { relativeTo: this.route });
+    }
 }
