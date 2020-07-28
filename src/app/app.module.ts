@@ -1,3 +1,5 @@
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,11 +10,13 @@ import { CourseCardComponent } from './course-card/course-card.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CourseCardComponent
+  //  CourseCardComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
