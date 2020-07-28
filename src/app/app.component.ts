@@ -8,17 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  courses: Course[] = COURSES;
-  firstCourse: Course = COURSES[0];
 
-  startDate: Date = new Date(2000, 0, 1);
-  constructor(){
-    this.firstCourse = COURSES[0];
-  }
-
-
-  selectedCourse(course: Course): void {
-    console.log("Course selection", course);
-  }
 
 }

@@ -3,9 +3,10 @@ import { AppTreeContainerRoutingModule } from './app.treeContainer.routing.modul
 
 import {NgModule} from '@angular/core';
 import { AppTreeContainerComponent } from './app.treeContainer.component';
+import { CommonModule } from '@angular/common';
 @NgModule({
     declarations:[AppTreeContainerComponent],
-    imports:[AppTreeContainerRoutingModule, CourseCardModule],
+    imports:[AppTreeContainerRoutingModule, CourseCardModule, CommonModule],
     exports:[AppTreeContainerComponent]
 })
 export class AppTreeContainerModule{}
