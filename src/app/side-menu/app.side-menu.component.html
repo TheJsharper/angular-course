@@ -1,15 +1,11 @@
 <div style="display: flex; margin-left: 1px; margin-right: 1px;">
 
-    <mat-accordion class="example-headers-align" style="flex-grow:3">   
+    <mat-accordion class="example-headers-align" style="flex-grow:1">   
         <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Personal data
+            <mat-expansion-panel-header >
+                <mat-panel-title >
+                    <h3 style="text-align: right;">Basics</h3>
                 </mat-panel-title>
-                <mat-panel-description>
-                    Type your name and age
-                    <mat-icon>account_circle</mat-icon>
-                </mat-panel-description>
             </mat-expansion-panel-header>
     
             <mat-selection-list #shoes [multiple]="false" (selectionChange)="selectItem($event)">
