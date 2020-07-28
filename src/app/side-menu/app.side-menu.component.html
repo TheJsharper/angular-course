@@ -11,7 +11,6 @@
                     <mat-icon>account_circle</mat-icon>
                 </mat-panel-description>
             </mat-expansion-panel-header>
-            <!--<courses></courses>-->
     
             <mat-selection-list #shoes [multiple]="false" (selectionChange)="selectItem($event)">
                 <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
