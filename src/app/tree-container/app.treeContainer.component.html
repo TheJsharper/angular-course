@@ -1,18 +1,1 @@
-<!----><div class="demo">
-    <!--s--><div> Start Date: {{ startDate  | date:'MMM/dd/yyyy'}}</div>
-</div>
-<!----><div *ngFor="let pair of firstCourse | keyvalue">
-    {{pair.key }}===> {{':'}}===> {{pair.value}}
-</div>
-
-<div class="courses">
-
-    <course-card *ngFor="let course of courses; index as i; first as isFirst; last as isLast"
-     (selectedCourse)="selectedCourse($event)"
-      [course]="course" [cardIndex]="i+1"
-       >
-
-    </course-card>
-  
-    
-</div>
+<courses></courses>

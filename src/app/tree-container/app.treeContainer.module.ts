@@ -1,12 +1,10 @@
-import { CourseCardModule } from './../course-card/course-card.module';
-import { AppTreeContainerRoutingModule } from './app.treeContainer.routing.module';
-
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
+import { AppCoursesListModule } from './../courses-list/app.courses-list.module';
 import { AppTreeContainerComponent } from './app.treeContainer.component';
-import { CommonModule } from '@angular/common';
+import { AppTreeContainerRoutingModule } from './app.treeContainer.routing.module';
 @NgModule({
-    declarations:[AppTreeContainerComponent],
-    imports:[AppTreeContainerRoutingModule, CourseCardModule, CommonModule],
-    exports:[AppTreeContainerComponent]
+    declarations: [AppTreeContainerComponent],
+    imports: [AppTreeContainerRoutingModule,  AppCoursesListModule],
+    exports: [AppTreeContainerComponent]
 })
-export class AppTreeContainerModule{}
+export class AppTreeContainerModule { }
