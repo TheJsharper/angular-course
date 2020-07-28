@@ -27,7 +27,8 @@
               {
                 "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
               },
-              "src/styles.css"
+              "src/styles.scss",
+              "src/assets/styles.scss"
             ],
             "scripts": [
               {
@@ -89,7 +90,8 @@
               {
                 "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
               },
-              "src/styles.css"
+              "src/styles.scss",
+              "src/assets/styles.scss"
             ],
             "scripts": [],
             "assets": [
