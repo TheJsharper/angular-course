@@ -1,13 +1,14 @@
+import { Person } from './app/model/person';
 import { Course } from './app/model/course';
 //iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png',
 //category: 'BEGINNER'
 
 export const COURSES: Course[] = [
-undefined,
+    undefined,
     {
         id: 1,
         description: "Angular Core Deep Dive",
-        
+
         longDescription: "A detailed walk-through of the most important part of Angular - the Core and Common modules",
         category: 'INTERMEDIATE',
         lessonsCount: 10
@@ -65,7 +66,7 @@ undefined,
         description: 'Complete Typescript Course',
         longDescription: "Complete Guide to Typescript From Scratch: Learn the language in-depth and use it to build a Node REST API.",
         iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png',
-        
+
     },
     {
         id: 9,
@@ -86,6 +87,135 @@ undefined,
 ];
 
 
-export function findCourseById(courseId:number) {
+export function findCourseById(courseId: number) {
     return COURSES.find(course => course.id === courseId);
 }
+
+const PERSONS: Person[] = [
+    {
+        name: "Darien Gleason",
+        dateOfBirth: "1974-8-30",
+        streetAddress: "9089 Botsford Highway",
+        city: "Schuppestad",
+        state: "England,Scotland,Wales,Northern Ireland",
+        zip: "JT7 OFI",
+        userName: "Darien44",
+        password: "ZgEg7R3U1LXRXNL",
+        email: "Darien_Gleason@yahoo.com",
+        avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/stushona/128.jpg"
+    },
+    {
+        name: "Tyreek Turcotte",
+        dateOfBirth: "1966-9-5",
+        streetAddress: "8498 Gisselle Branch",
+        city: "Starkshire",
+        state: "Starkshire, VT ZG0 4CL",
+        zip: "ZG0 4CL",
+        userName: "Tyreek.Turcotte",
+        password: "lxUP7yyw3gFQFjL",
+        email: "Tyreek37@yahoo.com",
+        avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/aaroni/128.jpg"
+    },
+    {
+        name: "Mrs. Savion Bins",
+        dateOfBirth: "1973-8-22",
+        streetAddress: "952 O'Keefe Coves",
+        city: "Cloydshire",
+        state: "Cloydshire, CA PV1 7EU",
+        zip: "CA PV1 7EU",
+        userName: "Savion25",
+        password: "8fLA_wJgQ0g1g5X",
+        email: "Savion23@yahoo.com",
+        avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/ponchomendivil/128.jpg"
+    },
+    {
+        name: "Dorothy Lebsack",
+        dateOfBirth: "1980-6-29",
+        streetAddress: "41191 Mayert Rest",
+        city: "East Medafurt",
+        state: "NH",
+        zip: "HO1 9HO",
+        userName: "Dorothy_Lebsack",
+        password: "duBcoJDQGLKNL2L",
+        email: "Dorothy.Lebsack@hotmail.com",
+        avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/GavicoInd/128.jpg"
+    },
+    {
+        name: "Lester Herzog",
+        dateOfBirth: "1988-4-23",
+        streetAddress: "0396 Haley Mission",
+        city: "Jaedenchester",
+        state: "IN",
+        zip: "XN83 0WZ",
+        userName: "Lester.Herzog92",
+        password: "aHxgBSkLEybvtBM",
+        email: "Lester24@hotmail.com",
+        avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/peterlandt/128.jpg"
+    },
+    {
+        name: "Miguel Armstrong",
+        dateOfBirth: "1989-10-11",
+        streetAddress: "9302 Jast Mission",
+        city: "East Tess",
+        state: "NC",
+        zip: "GY5 2UA",
+        userName: "Miguel.Armstrong47",
+        password: "nP4Pi3BsUxJJz50",
+        email: "Miguel30@yahoo.com",
+        avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/olgary/128.jpg"
+    },
+    {
+        name: "Coleman Kshlerin",
+        dateOfBirth: "1986-7-15",
+        streetAddress: "222 Paucek Plains",
+        city: "Tillmanberg, WV CF4 1OA",
+        state: "WV",
+        zip: "CF4 1OA",
+        userName: "Coleman.Kshlerin",
+        password: "KUfjYrfGrTq_66i",
+        email: "Coleman_Kshlerin76@gmail.com",
+        avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/gseguin/128.jpg"
+    },
+    {
+        name: "Ms. Ted Hickle",
+        dateOfBirth: "1962-3-2",
+        streetAddress: "142 Otha Street",
+        city: "Port Bernita, MT CN1 9EL",
+        state: "MT",
+        zip: "CN1 9EL",
+        userName: "Ted49",
+        password: "zPIHf1GTLMvZyUW",
+        email: "Ted.Hickle79@hotmail.com",
+        avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/nicollerich/128.jpg"
+    },
+    {
+        name: "Maiya Bergnaum",
+        dateOfBirth: "1976-11-11",
+        streetAddress: "593 Keyshawn Summit",
+        city: "Yostfurt",
+        state: "KS",
+        zip: "RN51 5YZ",
+        userName: "Maiya.Bergnaum9",
+        password: "6gBxuqrbIwMH2Rg",
+        email: "Maiya.Bergnaum@gmail.com",
+        avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/dicesales/128.jpg"
+    },
+    {
+        name: "Jean Satterfield",
+        dateOfBirth: "1989-4-13",
+        streetAddress: "00527 Reva Groves",
+        city: "Veumshire",
+        state: "Veumshire",
+        zip: "SC",
+        userName: "Jean96",
+        password: "tq8jhUKFZlyv7Uk",
+        email: "Jean19@gmail.com",
+        avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/stefooo/128.jpg"
+    },
+
+];
+
+const lastPerson: Person = PERSONS.find((_, index: number, persons: Person[]) => index == persons.length - 1);
+
+const firstPerson: Person = PERSONS.find((_, index: number, persons: Person[]) => index == 0);
+
