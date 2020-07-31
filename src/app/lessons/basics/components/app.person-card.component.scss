@@ -1,8 +1,45 @@
 :host {
-    .row-center {
-        display: flex;
-       // align-items: center;
-        flex-direction: column;
+    $shadow-color: rgba(0, 0, 0, 0.2);
+
+    $shadow-props: -10px 13px 10px 0px $shadow-color;
+
+    $padding-main-container: 0.9%;
+
+    $padding-details: 0.5%;
+
+    @function getShadowValues() {
+        $value: null;
+        @for $i from 1 through length($shadow-props) {
+            $value: #{$value} #{nth($shadow-props, $i)};
+        }
+        @return $value;
     }
-  
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        margin: 3%;
+        padding-bottom: $padding-main-container;
+        padding-left: $padding-main-container;
+        box-shadow: getShadowValues();
+    }
+    .person-img {
+        border: 1px solid burlywood;
+        border-radius: 50%;
+        box-shadow: getShadowValues();
+    }
+    .details {
+        background-color: beige;
+        padding-left: $padding-details;
+        padding-right: $padding-details;
+        box-shadow: getShadowValues();
+        border-radius: 2%;
+        .container {
+            display: flex;
+            .item {
+                display: flex;
+                flex: 1;
+            }
+        }
+    }
 }
