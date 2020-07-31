@@ -1,7 +1,6 @@
 :host {
-    $shadow-color: rgba(0, 0, 0, 0.2);
-
-    $shadow-props: -10px 13px 10px 0px $shadow-color;
+  
+    $shadow-props: -10px 13px 10px 0px rgba(0, 0, 0, 0.2);
 
     $padding-main-container: 0.9%;
 
