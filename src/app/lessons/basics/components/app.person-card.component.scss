@@ -22,23 +22,29 @@
         padding-bottom: $padding-main-container;
         padding-left: $padding-main-container;
         box-shadow: getShadowValues();
-    }
-    .person-img {
-        border: 1px solid burlywood;
-        border-radius: 50%;
-        box-shadow: getShadowValues();
-    }
-    .details {
-        background-color: beige;
-        padding-left: $padding-details;
-        padding-right: $padding-details;
-        box-shadow: getShadowValues();
-        border-radius: 2%;
-        .container {
+        .header {
             display: flex;
-            .item {
+            flex-direction: column;
+            align-items: center;
+
+            .person-img {
+                border: 1px solid burlywood;
+                border-radius: 50%;
+                box-shadow: getShadowValues();
+            }
+        }
+        .details {
+            background-color: beige;
+            padding-left: $padding-details;
+            padding-right: $padding-details;
+            box-shadow: getShadowValues();
+            border-radius: 2%;
+            .container {
                 display: flex;
-                flex: 1;
+                .item {
+                    display: flex;
+                    flex: 1;
+                }
             }
         }
     }
