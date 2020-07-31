@@ -1,2 +1,2 @@
-export * from './components/app.person-card.component';
-export * from './components/app.person-card.module';
+export * from './components/app.simple.component';
+export * from './components/app.simple.module';

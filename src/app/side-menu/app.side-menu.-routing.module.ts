@@ -1,4 +1,4 @@
-//import { AppPersonCardComponent } from './../lessons';
+import { AppSimpleComponent } from './../lessons';
 import { AppCoursesListComponent } from './../courses-list/app.courses-list.component';
 import { AppSideMenuComponent } from './app.side-menu.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -11,7 +11,7 @@ const routes: Routes =
             children: [
                 //{path:'pipe',  loadChildren:()=> import('../courses-list/app.courses-list.module').then(m => m.AppCoursesListModule)}
                 { path: 'pipe', component: AppCoursesListComponent },
-              //  { path: "component", component: AppPersonCardComponent }
+                { path: "component", component: AppSimpleComponent }
 
             ]
         }
