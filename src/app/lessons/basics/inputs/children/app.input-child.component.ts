@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 @Component({
     selector: 'input-child',
     templateUrl: './app.input-child.component.html',
@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppInputChildComponent implements OnInit {
 
+
+    @Input('user') user:User;
     constructor() { }
     ngOnInit(): void {
-
+        
     }
 
 }
