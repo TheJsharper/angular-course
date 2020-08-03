@@ -1,3 +1,4 @@
+import { AppOutputModule } from './../lessons/basics/outputs/app.output.module';
 import { AppInputsModule } from './../lessons/basics/inputs/app.inputs.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from "@angular/core";
@@ -16,7 +17,8 @@ import { AppSideMenuComponent } from './app.side-menu.component';
         AppCoursesListModule,
         MatListModule,
         CommonModule,
-        AppInputsModule
+        AppInputsModule,
+        AppOutputModule
     
     ],
     exports: [AppSideMenuComponent]
