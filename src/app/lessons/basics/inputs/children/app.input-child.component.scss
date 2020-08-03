@@ -1,5 +1,54 @@
-:host{
-    .container{
+:host {
+    display: block;
+    margin-left: 30%;
+    .title{
+        margin-left: 10%;
+    }
+    .container {
         display: flex;
+        .photo{
+            border-radius: 10%;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3.5%;
+            flex: 1;
+            margin-left: 1%;
+
+            .item {
+                display: flex;
+                flex: 1;
+                .first {
+                    display: flex;
+                    flex: 1;
+                }
+                .last {
+                    display: flex;
+                    flex: 10;
+                }
+                &:hover{
+                    background-color: rgba(222, 223, 224, 0.1);
+                    cursor: pointer;
+                }
+            }
+            .last-item {
+                display: flex;
+                flex: 10;
+                .first {
+                    display: flex;
+                    flex: 1;
+                }
+                .last {
+                    display: flex;
+                    flex: 10;
+                }
+                &:hover{
+                    background-color: rgba(222, 223, 224, 0.1);
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
