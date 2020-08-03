@@ -1,0 +1,25 @@
+:host {
+    display: block;
+    .container {
+        padding: 0.9%;
+        margin: 0.9%;
+        box-shadow: 14px 14px 30px -2px rgba(0, 0, 0, 0.66);
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+    }
+    .col {
+        display: flex;
+        flex: 1;
+    }
+    .photo {
+        display: flex;
+        justify-content: center;
+    }
+    .divider {
+        padding: 0.9%;
+        margin: 0.9%;
+    }
+}

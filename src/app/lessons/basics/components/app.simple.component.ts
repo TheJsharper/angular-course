@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AppSimpleComponent implements OnInit {
 
     animals: Animal[];
-    firstName: Animal;
-    secondName: Animal;
-    lastName: Animal;
+    firstAnimal: Animal;
+    secondAnimal: Animal;
+    lastAnimal: Animal;
 
 
     ngOnInit(): void {
@@ -41,9 +41,9 @@ export class AppSimpleComponent implements OnInit {
                     photo: "https://s3.amazonaws.com/uifaces/faces/twitter/gipsy_raf/128.jpg"
                 }
             ];
-        this.firstName = this.animals[0];
-        this.secondName = this.animals[1];
-        this.lastName = this.animals[2];
+        this.firstAnimal = this.animals[0];
+        this.secondAnimal = this.animals[1];
+        this.lastAnimal = this.animals[2];
 
     }
 
