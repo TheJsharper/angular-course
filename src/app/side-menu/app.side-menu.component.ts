@@ -6,11 +6,12 @@ import { Router, ActivatedRoute } from '@angular/router';
     templateUrl:'./app.side-menu.component.html'
 })
 export class AppSideMenuComponent{
-    typesOfShoes: string[] = ['pipe', 'component', 'directives', 'views-encapsulation', 'services'];
+    typesOfShoes: string[] = ['pipe', 'component', 'directives', 'inputs', 'outputs'];
     constructor(private router:Router, private route:ActivatedRoute){}
 
     selectItem(sel:MatSelectionListChange ):void{
-        console.log("==>", sel.option.value, this.route);
+        console.log("==>", sel.option.value);
         this.router.navigate([`${sel.option.value}`], { relativeTo: this.route });
+       // this.router.navigate([`${sel.option.value}`]);
     }
 }
