@@ -1,3 +1,4 @@
+import { User } from './../../../../model/user';
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
     selector: 'input-child',
@@ -12,17 +13,6 @@ export class AppInputChildComponent implements OnInit {
     ngOnInit(): void {
         
     }
-
-}
-
-export interface User {
-
-    name: string,
-    username: string,
-    avatar: string,
-    email: string,
-    dob: Date,
-    phone: string,
 
 }
 

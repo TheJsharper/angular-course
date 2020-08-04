@@ -1,1 +1,42 @@
-<h1> OutputChild </h1>
+<div class="container">
+    <div class="title">
+        <h1> User Info</h1>
+    </div>
+    <div class="content">
+        <div class="payload">
+            <div class="container">
+                <img [src]="user.avatar" width="200" height="200" class="photo">
+            </div>
+            <div class="info">
+                <h1>{{user.name}}</h1>
+
+                <div class="container">
+                    <div class="row">
+                        <strong class="title-item">Username</strong>
+                        <div class="value-item">{{user.username}} </div>
+                    </div>
+                    <div class="row">
+                        <strong class="title-item">Birthday</strong>
+                        <div class="value-item">{{user.dob}} </div>
+                    </div>
+                    <div class="row">
+                        <strong class="title-item">E-Mail</strong>
+                        <div class="value-item">{{user.email}} </div>
+                    </div>
+                    <div class="row">
+                        <strong class="title-item">Phone</strong>
+                        <div class="value-item">{{user.phone}} </div>
+                    </div>
+
+                    <div class="row">
+                        <strong class="title-item">Status</strong>
+                        <div class="last-value-item">
+                            <div class="status green ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

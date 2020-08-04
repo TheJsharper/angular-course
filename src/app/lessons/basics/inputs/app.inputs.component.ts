@@ -1,5 +1,5 @@
+import { User } from './../../../model/user';
 import { Component, OnInit } from '@angular/core';
-import { User } from './children/app.input-child.component';
 @Component({
     selector: 'inputs',
     templateUrl: './app.inputs.component.html',
