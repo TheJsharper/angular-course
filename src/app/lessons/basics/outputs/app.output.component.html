@@ -1,3 +1,4 @@
-
-<output-child></output-child>
-<!--<output-display></output-display>-->
+<div style="display: flex; flex-direction: column;">
+    <output-child  (selectedProperty)="OnSelectedProperty($event)"></output-child>
+    <output-display  [selectedProperty]="selectedPropery"></output-display>
+</div>

@@ -1,9 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { AppOutputDisplayComponent } from './app.output-display.component';
-import { NgModule } from "@angular/core";
+import { NgModule, Input } from "@angular/core";
 
 @NgModule({
-    declarations:[AppOutputDisplayComponent],
-    imports:[],
-    exports:[AppOutputDisplayComponent]
+    declarations: [AppOutputDisplayComponent],
+    imports: [CommonModule],
+    exports: [AppOutputDisplayComponent]
 })
-export class AppOutputDisplayModule{}
+export class AppOutputDisplayModule {
+   
+
+}

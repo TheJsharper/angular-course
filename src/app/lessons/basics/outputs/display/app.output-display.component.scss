@@ -1,0 +1,10 @@
+:host {
+    .status {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        &.green {
+            background-color: #2dd11d;
+        }
+    }
+}

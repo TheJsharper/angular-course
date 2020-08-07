@@ -5,33 +5,34 @@
     <div class="content">
         <div class="payload">
             <div class="container">
-                <img [src]="user.avatar" width="200" height="200" class="photo">
+                <img [src]="user.avatar" width="200" height="200" class="photo" #avatar
+                    (click)="OnSelectedProperty(avatar)">
             </div>
             <div class="info">
                 <h1>{{user.name}}</h1>
 
                 <div class="container">
-                    <div class="row">
+                    <div class="row" (click)="OnSelectedProperty(userName)">
                         <strong class="title-item">Username</strong>
-                        <div class="value-item">{{user.username}} </div>
+                        <div #userName class="value-item">{{user.username}} </div>
                     </div>
-                    <div class="row">
+                    <div class="row" (click)="OnSelectedProperty(dob)">
                         <strong class="title-item">Birthday</strong>
-                        <div class="value-item">{{user.dob}} </div>
+                        <div #dob class="value-item">{{user.dob}} </div>
                     </div>
-                    <div class="row">
+                    <div class="row" (click)="OnSelectedProperty(email)">
                         <strong class="title-item">E-Mail</strong>
-                        <div class="value-item">{{user.email}} </div>
+                        <div #email class="value-item">{{user.email}} </div>
                     </div>
-                    <div class="row">
+                    <div class="row" (click)="OnSelectedProperty(phone)">
                         <strong class="title-item">Phone</strong>
-                        <div class="value-item">{{user.phone}} </div>
+                        <div #phone class="value-item">{{user.phone}} </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" (click)="OnSelectedProperty(status)">
                         <strong class="title-item">Status</strong>
                         <div class="last-value-item">
-                            <div class="status green ">
+                            <div #status class="status green ">
                             </div>
                         </div>
                     </div>

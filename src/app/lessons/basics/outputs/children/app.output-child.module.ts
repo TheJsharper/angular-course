@@ -8,4 +8,7 @@ import { AppOutputChildComponent } from "./app.output-child.component";
     exports:[AppOutputChildComponent]
 
 })
-export class AppOutputChildModule{}
+export class AppOutputChildModule{
+
+   
+}

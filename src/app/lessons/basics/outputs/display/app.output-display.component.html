@@ -1,1 +1,12 @@
-<h1>Displaying</h1>
+<h1>Selected property</h1>
+<div style="display: flex;">
+    <div style="display: flex; width: 100%;">
+        <div [ngStyle]="getStyle(i)" [ngClass]="item =='status'?['status', 'green']:[]" 
+            *ngFor="let item of selectedProperty; index as i" [innerHTML]="getFormatter(item, i)">
+           
+       
+        </div>
+        
+        
+    </div>
+</div>
