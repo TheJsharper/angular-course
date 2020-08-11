@@ -8,5 +8,8 @@ export interface Person {
     userName: string;
     password: string;
     email: string;
-    avatar:string;
+    avatar: string;
+    read?: number;
+    views?: number;
+    coments?: number;
 }

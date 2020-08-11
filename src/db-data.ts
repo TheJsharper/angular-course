@@ -91,7 +91,7 @@ export function findCourseById(courseId: number) {
     return COURSES.find(course => course.id === courseId);
 }
 
-const PERSONS: Person[] = [
+export const PERSONS: Person[] = [
     {
         name: "Darien Gleason",
         dateOfBirth: "1974-8-30",
