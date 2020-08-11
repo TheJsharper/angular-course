@@ -1,0 +1,84 @@
+:host {
+    $colors:  rgb(244, 67, 54);
+    width: 35%;
+    display: block;
+    margin: 0.9%;
+    .container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        border-radius: 20%;
+        border-radius: 10%;
+        margin-left: 0.2%;
+        margin-bottom: 0.2%;
+
+        .photo {
+            display: flex;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .title {
+            display: flex;
+            width: 100%;
+            .name {
+                text-align: center;
+                width: 100%;
+            }
+        }
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 2%;
+            .item {
+                display: flex;
+                width: 100%;
+                .first {
+                    flex: 1;
+                }
+                .last {
+                    flex: 4;
+                }
+            }
+        }
+        .address-container {
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid $colors;
+            margin-top: 5.9%;
+            margin-left: 2%;
+            .item {
+                display: flex;
+                width: 100%;
+                &.distance {
+                    margin-top: 6%;
+                }
+                .first {
+                    flex: 1;
+                }
+                .last {
+                    flex: 4;
+                }
+            }
+        }
+        .popular-container {
+            display: flex;
+            margin-top: 5%;
+            background-color:$colors;
+            color: white;
+            padding-left: 2%;
+            padding-bottom: 2%;
+            justify-content: space-between;
+            .item {
+                display: flex;
+                flex-direction: column;
+               // width: 100%;
+                &.last {
+                  padding-right: 2%;;
+                }
+            }
+        }
+    }
+}

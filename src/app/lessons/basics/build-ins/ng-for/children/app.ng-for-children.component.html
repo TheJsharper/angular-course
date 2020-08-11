@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="photo">
+        <img [src]="person.avatar">
+    </div>
+    <div class="title">
+        <h1 class="name">{{person.name}}</h1>
+    </div>
+    <div class="info-container">
+        <div class="item">
+            <strong class="first"> Username </strong>
+            <div class="last">{{person.userName}}</div>
+        </div>
+
+        <div class="item">
+            <strong class="first"> Password </strong>
+            <div class="last">{{person.password}}</div>
+        </div>
+
+        <div class="item">
+            <strong class="first"> Date of birth </strong>
+            <div class="last">{{person.dateOfBirth}}</div>
+        </div>
+        <div class="item">
+            <strong class="first"> E-Mail </strong>
+            <div class="last">{{person.email}}</div>
+        </div>
+    </div>
+
+
+
+    <div class="address-container">
+        <div class="item distance">
+            <strong class="first"> Street </strong>
+            <div class="last">{{person.streetAddress}}</div>
+        </div>
+
+
+        <div class="item">
+            <strong class="first"> City </strong>
+            <div class="last">{{person.city}}</div>
+        </div>
+        <div class="item">
+            <strong class="first"> State </strong>
+            <div class="last">{{person.state}}</div>
+        </div>
+
+        <div class="item">
+            <strong class="first"> Zip </strong>
+            <div class="last">{{person.zip}}</div>
+        </div>
+    </div>
+
+
+
+    <div class="popular-container">
+        <div class="item">
+            <h3>4k</h3>
+            <strong >Read</strong>
+        </div>
+
+        <div class="item">
+            <h3>5123</h3>
+            <strong >Views</strong>
+        </div>
+
+        <div class="item last">
+            <h3>32</h3>
+            <strong >Comments</strong>
+        </div>
+    </div>
+
+
+</div>
+
+<!--
+         name: "Ms. Ted Hickle",
+        dateOfBirth: "1962-3-2",
+        streetAddress: "142 Otha Street",
+        city: "Port Bernita, MT CN1 9EL",
+        state: "MT",
+        zip: "CN1 9EL",
+        userName: "Ted49",
+        password: "zPIHf1GTLMvZyUW",
+        email: "Ted.Hickle79@hotmail.com",
+        avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/nicollerich/128.jpg"
+-->

@@ -1,3 +1,4 @@
+import { AppNgForComponent } from './../lessons/basics/build-ins/ng-for/app.ng-for.component';
 import { AppOutputComponent } from './../lessons/basics/outputs/app.output.component';
 import { AppInputsComponent } from './../lessons/basics/inputs/app.inputs.component';
 import { AppSimpleComponent } from './../lessons';
@@ -15,7 +16,8 @@ const routes: Routes =
                 { path: 'pipe', component: AppCoursesListComponent },
                 { path: "component", component: AppSimpleComponent },
                 { path: "inputs", component: AppInputsComponent },
-                {path:'outputs', component:AppOutputComponent}
+                {path:'outputs', component:AppOutputComponent},
+                {path:'ng-for', component:AppNgForComponent}
               // { path: "inputs", loadChildren : ()=> import('../lessons/basics/inputs/app.inputs.module').then(m => m.AppInputsModule) }
 
             ]

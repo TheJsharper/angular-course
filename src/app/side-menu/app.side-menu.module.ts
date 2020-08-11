@@ -1,3 +1,4 @@
+import { AppNgForModule } from './../lessons/basics/build-ins/ng-for/app.ng-for.module';
 import { AppOutputModule } from './../lessons/basics/outputs/app.output.module';
 import { AppInputsModule } from './../lessons/basics/inputs/app.inputs.module';
 import { CommonModule } from '@angular/common';
@@ -18,7 +19,8 @@ import { AppSideMenuComponent } from './app.side-menu.component';
         MatListModule,
         CommonModule,
         AppInputsModule,
-        AppOutputModule
+        AppOutputModule,
+        AppNgForModule
     
     ],
     exports: [AppSideMenuComponent]
