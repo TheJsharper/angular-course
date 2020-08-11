@@ -1,3 +1,4 @@
+import { AppNgIfModule } from './../lessons/basics/build-ins/ng-if/app.ng-if.module';
 import { AppNgForModule } from './../lessons/basics/build-ins/ng-for/app.ng-for.module';
 import { AppOutputModule } from './../lessons/basics/outputs/app.output.module';
 import { AppInputsModule } from './../lessons/basics/inputs/app.inputs.module';
@@ -20,7 +21,8 @@ import { AppSideMenuComponent } from './app.side-menu.component';
         CommonModule,
         AppInputsModule,
         AppOutputModule,
-        AppNgForModule
+        AppNgForModule,
+        AppNgIfModule
     
     ],
     exports: [AppSideMenuComponent]

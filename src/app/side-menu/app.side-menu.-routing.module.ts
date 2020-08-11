@@ -6,6 +6,7 @@ import { AppCoursesListComponent } from './../courses-list/app.courses-list.comp
 import { AppSideMenuComponent } from './app.side-menu.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from "@angular/core";
+import { AppNgIfComponent } from '../lessons/basics/build-ins/ng-if/app.ng-if.component';
 
 const routes: Routes =
     [
@@ -17,7 +18,8 @@ const routes: Routes =
                 { path: "component", component: AppSimpleComponent },
                 { path: "inputs", component: AppInputsComponent },
                 {path:'outputs', component:AppOutputComponent},
-                {path:'ng-for', component:AppNgForComponent}
+                {path:'ng-for', component:AppNgForComponent},
+                {path:'ng-if', component:AppNgIfComponent}
               // { path: "inputs", loadChildren : ()=> import('../lessons/basics/inputs/app.inputs.module').then(m => m.AppInputsModule) }
 
             ]
