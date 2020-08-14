@@ -1,4 +1,3 @@
-import { SELLERS } from './../../../../../../db-data';
 import { Component, Input, OnInit } from '@angular/core';
 import { Seller } from './../../../../../model/person';
 @Component({
@@ -14,7 +13,6 @@ export class AppNgIfChildrenComponent implements OnInit {
 
     }
     ngOnInit(): void {
-        // this.seller = SELLERS[1];
         this.progressColors = new Map<number, string>();
         this.progressColors.set(0, " #ffffff")
         this.progressColors.set(5, "#ebf9eb")
