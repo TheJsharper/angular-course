@@ -1,3 +1,4 @@
+import { SELLERS } from './../../../../../../db-data';
 import { Component, Input, OnInit } from '@angular/core';
 import { Seller } from './../../../../../model/person';
 @Component({
@@ -13,7 +14,7 @@ export class AppNgIfChildrenComponent implements OnInit {
 
     }
     ngOnInit(): void {
-       // this.seller = SELLERS[0];
+        // this.seller = SELLERS[1];
         this.progressColors = new Map<number, string>();
         this.progressColors.set(0, " #ffffff")
         this.progressColors.set(5, "#ebf9eb")
@@ -54,7 +55,12 @@ export class AppNgIfChildrenComponent implements OnInit {
         } else {
             index = 5;
         }
-        return { 'background-color': this.progressColors.get(index), "width": `${percent}%`, "border-top-right-radius": percent > 95 ? "14px" : "0px", "border-bottom-right-radius": percent > 95 ? "14px" : "0px" }
+        return {
+            'background-color': this.progressColors.get(index),
+            "width": `${percent}%`,
+            "border-top-right-radius": percent > 95 ? "14px" : "0px",
+            "border-bottom-right-radius": percent > 95 ? "14px" : "0px"
+        }
     }
     getFontColor(percent: number): { [key: string]: any } {
         return percent > 60 ? { "color": "white" } : { "color": "black" };
