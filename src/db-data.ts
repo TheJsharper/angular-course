@@ -1,4 +1,4 @@
-import { Person } from './app/model/person';
+import { Person, Seller } from './app/model/person';
 import { Course } from './app/model/course';
 //iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png',
 //category: 'BEGINNER'
@@ -89,6 +89,11 @@ export const COURSES: Course[] = [
 
 export function findCourseById(courseId: number) {
     return COURSES.find(course => course.id === courseId);
+};
+export const getRandMinMax: (min: number, max: number) => number = (min: number, max: number) => {
+    const minResult: number = Math.ceil(min);
+    const maxResult: number = Math.floor(max);
+    return Math.floor(Math.random() * (maxResult - minResult)) + minResult;
 }
 
 export const PERSONS: Person[] = [
@@ -219,3 +224,10 @@ const lastPerson: Person = PERSONS.find((_, index: number, persons: Person[]) =>
 
 const firstPerson: Person = PERSONS.find((_, index: number, persons: Person[]) => index == 0);
 
+export const SELLERS: Seller[] = PERSONS.reduce((prev: Seller[], cur: Person) => {
+    const rang: number = getRandMinMax(1000, 5000);
+    const points: number = getRandMinMax(1000, rang);
+    const seller: Seller = { avatar: cur.avatar, points, rang, salesProcess: getRandMinMax(0, 100), firstContact: getRandMinMax(0, 100), needAnalysis: getRandMinMax(0, 100), priceNegotiation: getRandMinMax(0, 100) };
+    prev.push(seller);
+    return prev;
+}, []);

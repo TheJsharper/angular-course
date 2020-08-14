@@ -6,7 +6,7 @@
             <h3>My Status</h3>
         </div>
         <div class="photo-container">
-            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/GavicoInd/128.jpg" class="photo">
+            <img [src]="seller.avatar" class="photo">
         </div>
 
     </div>
@@ -17,7 +17,7 @@
             <strong class="title">
                 Point
             </strong>
-            <h1 class="value">2.431</h1>
+            <h1 class="value">{{seller.points}}</h1>
         </div>
 
 
@@ -30,7 +30,7 @@
 
         <div class="rang">
             <strong class="title"> Rang </strong>
-            <h1 class="value">4.431</h1>
+            <h1 class="value">{{seller.rang}}</h1>
         </div>
     </div>
 
@@ -44,44 +44,76 @@
 
         <div class="container">
             <div class="layout">
-                <div class="row">
+                <div class="row" *ngIf="seller.salesProcess >10 else placeholerSales">
 
-                    <strong>Seles process</strong>
+                    <strong>Sales process</strong>
                     <div class="progress-bar">
-                        <span class="percent">30%</span>
-                        <div class="bar"></div>
+                        <span class="percent"
+                            [ngStyle]="getFontColor(seller.salesProcess)">{{seller.salesProcess}}%</span>
+                        <div class="bar" [ngStyle]="getProgress(seller.salesProcess)"></div>
                     </div>
                 </div>
 
+                <ng-template #placeholerSales>
+                    <div class="row">
+                        <strong>Sales process</strong>
+                        <div class="incubation-phase"> Incubation phase </div>
+                    </div>
+                </ng-template>
 
-                <div class="row">
+
+                <div class="row" *ngIf="seller.firstContact >10 else placeholerContact">
 
                     <strong>First Contact</strong>
                     <div class="progress-bar">
-                        <span class="percent">30%</span>
-                        <div class="bar"></div>
+                        <span class="percent"
+                            [ngStyle]="getFontColor(seller.firstContact)">{{seller.firstContact}}%</span>
+                        <div class="bar" [ngStyle]="getProgress(seller.firstContact)"></div>
                     </div>
                 </div>
 
+                <ng-template #placeholerContact>
+                    <div class="row">
+                        <strong>First Contact</strong>
+                        <div class="incubation-phase"> Incubation phase </div>
+                    </div>
+                </ng-template>
 
-                <div class="row">
 
-                    <strong>Needd analysis</strong>
+                <div class="row" *ngIf="seller.needAnalysis >10 else placeholerAnalysis">
+
+                    <strong>Need analysis</strong>
                     <div class="progress-bar">
-                        <span class="percent">30%</span>
-                        <div class="bar"></div>
+                        <span class="percent"
+                            [ngStyle]="getFontColor(seller.needAnalysis)">{{seller.needAnalysis}}%</span>
+                        <div class="bar" [ngStyle]="getProgress(seller.needAnalysis)"></div>
                     </div>
                 </div>
 
+                <ng-template #placeholerAnalysis>
+                    <div class="row">
+                        <strong>Need analysis</strong>
+                        <div class="incubation-phase"> Incubation phase </div>
+                    </div>
+                </ng-template>
 
-                <div class="row">
+
+
+                <div class="row" *ngIf="seller.priceNegotiation >10 else placeholerNegotation">
 
                     <strong>Price negotiation</strong>
                     <div class="progress-bar">
-                        <span class="percent">30%</span>
-                        <div class="bar"></div>
+                        <span class="percent"
+                            [ngStyle]="getFontColor(seller.priceNegotiation)">{{seller.priceNegotiation}}%</span>
+                        <div class="bar" [ngStyle]="getProgress(seller.priceNegotiation)"></div>
                     </div>
                 </div>
+                <ng-template #placeholerNegotation>
+                    <div class="row">
+                        <strong>Price negotiation</strong>
+                        <div class="incubation-phase"> Incubation phase </div>
+                    </div>
+                </ng-template>
 
             </div>
         </div>

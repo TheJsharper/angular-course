@@ -6,7 +6,8 @@
     margin-bottom: 1.5%;
 
     .view-container {
-        display: flex; flex-direction: column;
+        display: flex;
+        flex-direction: column;
         .profil {
             width: 100%;
             background: rgb(136, 166, 217);
@@ -110,22 +111,25 @@
                             position: relative;
                             padding: 3px;
                             border-radius: 15px;
-
                             .percent {
                                 position: absolute;
                                 left: 45%;
-                                color: white;
                             }
 
                             .bar {
                                 height: 20px;
-                                background-color: green;
-                                width: 60%;
-                                border-end-end-radius: 0;
-                                border-top-left-radius: 15px;
+                                border-top-left-radius: 14px;
                                 border-bottom-left-radius: 14px;
-                                //0  15px 15px;
                             }
+                        }
+                        .incubation-phase {
+                            width: 35%;
+                            padding: 3px;
+                            border-radius: 15px;
+                            text-align: center;
+                            background-color: rgba($color: #cc5c5c, $alpha: .4);
+                            color: white;
+                            font-size: larger;
                         }
                     }
                 }
