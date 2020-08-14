@@ -4,6 +4,7 @@
     width: 50%;
     margin-top: 0.5%;
     margin-bottom: 1.5%;
+    height: 100%;
 
     .view-container {
         display: flex;
@@ -127,7 +128,7 @@
                             padding: 3px;
                             border-radius: 15px;
                             text-align: center;
-                            background-color: rgba($color: #cc5c5c, $alpha: .4);
+                            background-color: rgba($color: #cc5c5c, $alpha: 0.4);
                             color: white;
                             font-size: larger;
                         }
@@ -136,4 +137,19 @@
             }
         }
     }
-}
+    .no-data-root{
+        background-color: rgba(238, 227, 227, 0.9);
+        width: 100%; position: relative; height: 920px;
+        .no-data {
+            position: absolute;
+            transform:  rotate(-45deg);
+            left: 28%;
+            top: 35%;
+            color: white;
+            text-align: center;
+            font-size: 120px;
+            height: auto;
+        }
+    }
+    }
+

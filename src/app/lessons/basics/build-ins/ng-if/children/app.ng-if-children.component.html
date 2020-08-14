@@ -1,4 +1,4 @@
-<div class="view-container">
+<div class="view-container" *ngIf="seller else placeholderNoData">
 
 
     <div class="profil">
@@ -120,3 +120,12 @@
     </div>
 
 </div>
+<ng-template #placeholderNoData>
+    <div class="no-data-root">
+            <div class="no-data">
+                
+    NO<br/> DATA
+            </div>
+
+    </div>
+</ng-template>
