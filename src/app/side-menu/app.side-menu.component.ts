@@ -6,7 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
     templateUrl:'./app.side-menu.component.html'
 })
 export class AppSideMenuComponent{
-    typesOfShoes: string[] = ['pipe', 'component', 'directives', 'inputs', 'outputs', 'ng-for', 'ng-if'];
+    typesOfShoes: string[] = ['pipe', 'component',  'inputs', 'outputs', 'ng-for', 'ng-if', 'ng-class'];
     constructor(private router:Router, private route:ActivatedRoute){}
 
     selectItem(sel:MatSelectionListChange ):void{

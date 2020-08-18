@@ -1,3 +1,4 @@
+import { AppNgClassComponent } from './../lessons/basics/build-ins/ng-class/app.ng-class.component';
 import { AppNgForComponent } from './../lessons/basics/build-ins/ng-for/app.ng-for.component';
 import { AppOutputComponent } from './../lessons/basics/outputs/app.output.component';
 import { AppInputsComponent } from './../lessons/basics/inputs/app.inputs.component';
@@ -19,7 +20,8 @@ const routes: Routes =
                 { path: "inputs", component: AppInputsComponent },
                 {path:'outputs', component:AppOutputComponent},
                 {path:'ng-for', component:AppNgForComponent},
-                {path:'ng-if', component:AppNgIfComponent}
+                {path:'ng-if', component:AppNgIfComponent},
+                {path:'ng-class', component:AppNgClassComponent}
               // { path: "inputs", loadChildren : ()=> import('../lessons/basics/inputs/app.inputs.module').then(m => m.AppInputsModule) }
 
             ]
