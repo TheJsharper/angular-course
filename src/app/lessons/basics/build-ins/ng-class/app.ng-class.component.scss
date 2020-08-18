@@ -91,42 +91,7 @@
         }
     }
 
-    .progress {
-        position: relative;
-        width: 250px;
-        height: 250px;
-        height: 250px;
-        top: 12px;
-        .back {
-            position: absolute;
-           // background-color: black;
-            width: 250px;
-            height: 250px;
-            top: -5px;
-            left: 2px;
-            border-radius: 50%;
-            background: conic-gradient(yellow 15deg, orange 15deg 360deg);
-        }
-        .back-centre {
-            position: absolute;
-            background-color: red;
-            width: 220px;
-            height: 220px;
-            top: 10px;
-            left: 17px;
-            border-radius: 50%;
-            &:after {
-                position: absolute;
-                width: 0.03%;
-                height: auto;
-                content: "10%";
-                top: 34.3%;
-                left: 29.3%;
-                font-size: xxx-large;
-                color: white;
-            }
-        }
-    }
+    
 
     
 
