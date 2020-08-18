@@ -1,0 +1,228 @@
+:host {
+    .pie {
+        background: conic-gradient(
+            hsl(360, 100%, 50%),
+            hsl(315, 100%, 50%),
+            hsl(270, 100%, 50%),
+            hsl(225, 100%, 50%),
+            hsl(180, 100%, 50%),
+            hsl(135, 100%, 50%),
+            hsl(90, 100%, 50%),
+            hsl(45, 100%, 50%),
+            hsl(0, 100%, 50%)
+        );
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .pie1 {
+        width: 100px;
+        height: 100px;
+        background: conic-gradient(
+            #fff 0turn 0.09turn,
+            #bbb 0.09turn 0.27turn,
+            #666 0.27turn 0.54turn,
+            #000 0.54turn 1turn
+        );
+        border-radius: 50%;
+    }
+
+    .pie2 {
+        width: 100px;
+        height: 100px;
+        background: conic-gradient(red 0deg, orange 90deg, yellow 180deg, green 270deg, blue 360deg);
+        border-radius: 50%;
+    }
+
+    .pie3 {
+        width: 100px;
+        height: 100px;
+        background: conic-gradient(red 36deg, orange 36deg 170deg, yellow 170deg 280deg, red 280deg 360deg);
+        border-radius: 50%;
+    }
+
+    .pie4 {
+        margin: 25px 0;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 12px solid transparent;
+        background-size: 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(white, white), linear-gradient(30deg, red 36%, lightgrey 30%),
+            linear-gradient(120deg, yellow 36%, lightgrey 30%), linear-gradient(300deg, blue 36%, lightgrey 30%),
+            linear-gradient(210deg, green 36%, lightgrey 30%);
+        background-position: center center, left top, right top, left bottom, right bottom;
+        background-origin: content-box, border-box, border-box, border-box, border-box;
+        background-clip: content-box, border-box, border-box, border-box, border-box;
+        transform: rotate(30deg);
+    }
+
+    .pie5 {
+        /* Pie chart */
+        background: conic-gradient(yellowgreen 40%, gold 0 70%, #f06 0);
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+    .pie6 {
+        width: 15rem;
+        height: 15rem;
+        border: solid #a7a9ac 2px;
+        border-radius: 50%;
+        position: relative;
+        &:before {
+            top: 1.01%;
+            left: -0.99%;
+            position: absolute;
+            content: "";
+            width: 15rem;
+            height: 15rem;
+            border-right: solid #658d1b 0.6rem;
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+        &:after {
+            content: "11%";
+            position: absolute;
+            top: 37.03%;
+            left: 33.01%;
+            font-size: xxx-large;
+        }
+    }
+
+    .progress {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        height: 250px;
+        top: 12px;
+        .back {
+            position: absolute;
+           // background-color: black;
+            width: 250px;
+            height: 250px;
+            top: -5px;
+            left: 2px;
+            border-radius: 50%;
+            background: conic-gradient(yellow 15deg, orange 15deg 360deg);
+        }
+        .back-centre {
+            position: absolute;
+            background-color: red;
+            width: 220px;
+            height: 220px;
+            top: 10px;
+            left: 17px;
+            border-radius: 50%;
+            &:after {
+                position: absolute;
+                width: 0.03%;
+                height: auto;
+                content: "10%";
+                top: 34.3%;
+                left: 29.3%;
+                font-size: xxx-large;
+                color: white;
+            }
+        }
+    }
+
+    
+
+    .radial {
+        $padding: 20px;
+        $radius: 100px;
+        $color: crimson;
+        $top-offset: ($radius - 100px) / 2;
+        $thin-border: 2px;
+        $thick-border: 6px;
+        margin-top: 0.4%;
+        height: $radius + $padding;
+        position: relative;
+        width: $radius + $padding;
+        .circle {
+            // main ring
+            position: absolute;
+            width: $radius;
+            height: $radius;
+            background-color: $color;
+            border-radius: 50%;
+            top: $padding / 2;
+            left: $padding / 2;
+            &:before {
+                // Outer thin ring
+                content: "";
+                position: absolute;
+                width: $radius - 4px;
+                height: $radius - 4px;
+                background: transparent;
+                border-radius: 50%;
+                border: $thin-border solid $color;
+                top: $thin-border;
+                left: $thin-border;
+                z-index: 11;
+            }
+            &:after {
+                // the thick ring
+                content: "";
+                position: absolute;
+                width: $radius - (2 * $thick-border);
+                height: $radius - (2 * $thick-border);
+                background: white;
+                border-radius: 50%;
+                left: $thick-border;
+                top: $thick-border;
+            }
+        }
+        .half-circle {
+            // after 50% cover the complete right half
+            display: none;
+            position: absolute;
+            z-index: 12;
+            height: $radius;
+            width: $radius;
+            background: transparent;
+            left: 10px;
+            top: 10px;
+            border: 6px solid $color;
+            border-radius: $radius / 2 - 2px;
+            clip: rect(0px, $radius, $radius, $radius / 2);
+            //.transform-origin(left center);
+        }
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: transparent;
+            .overlay-left {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: white;
+                transform: rotate(30deg); //add this to increase the angle.
+            }
+            .overlay-right {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                background: white;
+                top: 0;
+                right: 0;
+                transform: rotate(150deg); //add this to increase the angle.
+            }
+        }
+    }
+    .clip-me {
+        width: 300px;
+        height: 300px;
+        background: red;
+        clip-path: polygon(51% 0, 0% 100%, 100% 40%);
+    }
+}
