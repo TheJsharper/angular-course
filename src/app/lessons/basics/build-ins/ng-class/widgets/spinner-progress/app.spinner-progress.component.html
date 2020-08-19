@@ -1,4 +1,6 @@
 <div class="progress">
-    <div class="back" [ngStyle]="getProgress()"></div>
-    <div class="back-centre"></div>
-</div>
+    <div class="bar" [ngStyle]="getProgress()"></div>
+    <div class="spin">
+        <span class="porcentage-text">{{value}}%</span>
+    </div>
+</div>-
