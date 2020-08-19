@@ -9,7 +9,7 @@ export class AppSpinnerProgressComponent implements OnInit {
     procentage: number;
     procentageView:number;
     ngOnInit(): void {
-        this.value = 80;
+        this.value = 99;
         this.procentage = this.value / 100 * 360;
     }
 
@@ -19,7 +19,7 @@ export class AppSpinnerProgressComponent implements OnInit {
 
     getProgress(): { [key: string]: any } {
         
-        return { "background": `conic-gradient(yellow ${this.procentage}deg, orange ${this.procentage}deg 360deg)` };
+        return { "background": `conic-gradient(#5FDB6A ${this.procentage}deg, white ${this.procentage}deg 360deg)` };
     }
     getProcentage():{[key:string]:any}{
         return {}

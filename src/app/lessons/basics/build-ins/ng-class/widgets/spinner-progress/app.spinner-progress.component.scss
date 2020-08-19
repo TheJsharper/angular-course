@@ -16,21 +16,23 @@
             top: -5px;
             left: 2px;
             border-radius: 50%;
+            border: 1px solid #ccc;
         }
         .spin {
             position: absolute;
-            background-color: red;
+            background-color:#72A0C1;
             width: 14%;
             height: 223px;
             top: 10px;
             left: 17px;
             border-radius: 50%;
+            border: 1px solid #ccc;
 
             .porcentage-text {
                 position: absolute;
                 top: 34.3%;
                 left: 29.3%;
-                font-size: xxx-large;
+                font-size: 300%;
                 color: white;
             }
         }
