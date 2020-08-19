@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { getRandMinMax } from 'src/db-data';
 @Component({
     selector: 'spinner-progress',
     templateUrl: './app.spinner-progress.component.html',
     styleUrls: ['./app.spinner-progress.component.scss']
 })
 export class AppSpinnerProgressComponent implements OnInit {
-    value: number;
-    procentage: number;
-    procentageView:number;
+    @Input("value") value: number;
+    degrees: number;
     ngOnInit(): void {
-        this.value = 99;
-        this.procentage = this.value / 100 * 360;
+        if (!this.value)
+            this.value = getRandMinMax(1, 100);
+        this.degrees = this.value / 100 * 360;
     }
 
 
@@ -18,10 +19,8 @@ export class AppSpinnerProgressComponent implements OnInit {
 
 
     getProgress(): { [key: string]: any } {
-        
-        return { "background": `conic-gradient(#5FDB6A ${this.procentage}deg, white ${this.procentage}deg 360deg)` };
+
+        return { "background": `conic-gradient(#5FDB6A ${this.degrees}deg, white ${this.degrees}deg 360deg)` };
     }
-    getProcentage():{[key:string]:any}{
-        return {}
-    }
+   
 }
