@@ -227,7 +227,7 @@ const firstPerson: Person = PERSONS.find((_, index: number, persons: Person[]) =
 export const SELLERS: Seller[] = PERSONS.reduce((prev: Seller[], cur: Person) => {
     const rang: number = getRandMinMax(1000, 5000);
     const points: number = getRandMinMax(1000, rang);
-    const seller: Seller = { avatar: cur.avatar, points, rang, salesProcess: getRandMinMax(0, 100), firstContact: getRandMinMax(0, 100), needAnalysis: getRandMinMax(0, 100), priceNegotiation: getRandMinMax(0, 100) };
+    const seller: Seller = { name:cur.name, avatar: cur.avatar, points, rang, salesProcess: getRandMinMax(0, 100), firstContact: getRandMinMax(0, 100), needAnalysis: getRandMinMax(0, 100), priceNegotiation: getRandMinMax(0, 100) };
     prev.push(seller);
     return prev;
 }, []);
