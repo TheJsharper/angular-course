@@ -31,7 +31,7 @@ export class AppHalfPieComponent implements OnInit {
 
         const data: SplitDataView = this.getTwoHalfDataOrderedDegreeses(twoHalfDataView);
         this.data = data;
-      //  console.log("dataProcenatges", dataProcentages, "DataDegreesses", dataDegresses, "limit", limited, "values", values, "total Procentages", totalProcentages, "Toatl Degresses", totalDegresses, "split data", twoHalfDataView);
+        //  console.log("dataProcenatges", dataProcentages, "DataDegreesses", dataDegresses, "limit", limited, "values", values, "total Procentages", totalProcentages, "Toatl Degresses", totalDegresses, "split data", twoHalfDataView);
 
 
 
@@ -43,6 +43,7 @@ export class AppHalfPieComponent implements OnInit {
         });
         return values;
     }
+
     private getLimited(data: HalfPieValue[]): number {
         const limit: number = data.reduce((prev: number, cur: HalfPieValue) => {
             return prev += cur.count;
@@ -57,6 +58,7 @@ export class AppHalfPieComponent implements OnInit {
         return dataProcentages;
 
     }
+
     private getHalfPieDataView(data: HalfPieValue[]): HalfPieDataView[] {
         const dataDegresses: HalfPieDataView[] = data.map((value: HalfPieValue) => {
             return { label: value.label, degrees: value.count / 100 * 180, procentage: value.count };
@@ -84,9 +86,9 @@ export class AppHalfPieComponent implements OnInit {
 
         const first: string = this.getCssGradientProperty(data.firstHalf, 0);
         const second: string = this.getCssGradientProperty(data.secondHalf, 270);
-        //  data.firstHalf.reduce(())
         return { limited: data.limited, firstHalf: data.firstHalf, secondHalf: data.secondHalf, firstHalfGradientProperty: first, secondHalfGradientProperty: second };
     }
+    
     private getCssGradientProperty(data: HalfPieDataView[], initialDegrees: number): string {
         const result: { result: string, lastDegress: number } = data.reduce((prev: { result: string, lastDegress: number }, cur: HalfPieDataView, index: number, curData: HalfPieDataView[]) => {
             if (index == 0) {
