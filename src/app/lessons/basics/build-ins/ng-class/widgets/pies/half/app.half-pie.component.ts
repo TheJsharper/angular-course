@@ -8,6 +8,7 @@ import { getRandMinMax } from 'src/db-data';
     styleUrls: ['./app.half-pie.component.scss']
 })
 export class AppHalfPieComponent implements OnInit {
+    private data: SplitDataView;
 
     ngOnInit(): void {
 
@@ -22,13 +23,15 @@ export class AppHalfPieComponent implements OnInit {
 
 
         const totalProcentages: number = this.getTotalProcentages(dataDegresses);
-    
 
-        const totalDegresses: number = this.getTotalDegreeses(dataDegresses) ;
 
-        const twoHalfDataView:SplitDataView = this.getTwoHalfData(dataDegresses, limited);
+        const totalDegresses: number = this.getTotalDegreeses(dataDegresses);
 
-        console.log("dataProcenatges", dataProcentages, "DataDegreesses", dataDegresses, "limit", limited, "values", values, "total Procentages", totalProcentages, "Toatl Degresses", totalDegresses, "split data", twoHalfDataView);
+        const twoHalfDataView: SplitDataView = this.getTwoHalfData(dataDegresses, limited);
+
+        const data: SplitDataView = this.getTwoHalfDataOrderedDegreeses(twoHalfDataView);
+        this.data = data;
+      //  console.log("dataProcenatges", dataProcentages, "DataDegreesses", dataDegresses, "limit", limited, "values", values, "total Procentages", totalProcentages, "Toatl Degresses", totalDegresses, "split data", twoHalfDataView);
 
 
 
@@ -63,7 +66,7 @@ export class AppHalfPieComponent implements OnInit {
 
 
     private getTotalProcentages(data: HalfPieDataView[]): number {
-        return data.reduce((prev: number, cur: HalfPieDataView) => prev += cur.procentage , 0);
+        return data.reduce((prev: number, cur: HalfPieDataView) => prev += cur.procentage, 0);
     }
 
     private getTotalDegreeses(data: HalfPieDataView[]): number {
@@ -71,15 +74,39 @@ export class AppHalfPieComponent implements OnInit {
     }
 
     private getTwoHalfData(data: HalfPieDataView[], limited: number): SplitDataView {
-        const half: number = Math.ceil(data.length /2);
+        const half: number = Math.ceil(data.length / 2);
 
         return { firstHalf: data.splice(0, half), secondHalf: data.splice(-half), limited };
     }
 
     private getTwoHalfDataOrderedDegreeses(data: SplitDataView): SplitDataView {
 
+
+        const first: string = this.getCssGradientProperty(data.firstHalf, 0);
+        const second: string = this.getCssGradientProperty(data.secondHalf, 270);
         //  data.firstHalf.reduce(())
-        return null;
+        return { limited: data.limited, firstHalf: data.firstHalf, secondHalf: data.secondHalf, firstHalfGradientProperty: first, secondHalfGradientProperty: second };
+    }
+    private getCssGradientProperty(data: HalfPieDataView[], initialDegrees: number): string {
+        const result: { result: string, lastDegress: number } = data.reduce((prev: { result: string, lastDegress: number }, cur: HalfPieDataView, index: number, curData: HalfPieDataView[]) => {
+            if (index == 0) {
+                if (prev.lastDegress == 0)
+                    prev.result = `${this.getColor()} ${prev.lastDegress}deg ${cur.degrees}deg`;
+                else
+                    prev.result = `${this.getColor()} ${prev.lastDegress}deg ${cur.degrees + prev.lastDegress}deg`;
+            } else if (index == curData.length - 1) {
+                prev.lastDegress += curData[index - 1].degrees;
+                if (initialDegrees == 0)
+                    prev.result = `${prev.result}, ${this.getColor()} ${prev.lastDegress}deg ${cur.degrees + prev.lastDegress}deg,`;
+                else
+                    prev.result = `${prev.result}, ${this.getColor()} ${prev.lastDegress}deg ${cur.degrees + prev.lastDegress}deg`;
+            } else {
+                prev.lastDegress += curData[index - 1].degrees;
+                prev.result = `${prev.result}, ${this.getColor()} ${prev.lastDegress}deg ${cur.degrees + prev.lastDegress}deg`;
+            }
+            return prev;
+        }, { result: "", lastDegress: initialDegrees });
+        return result.result;
     }
 
 
@@ -89,7 +116,8 @@ export class AppHalfPieComponent implements OnInit {
     }
 
     getCssPoperty(): { [key: string]: any } {
-        return { "background": `conic-gradient( ${this.getColor()} 0deg 20deg, ${this.getColor()} 20deg 90deg, white 90deg 270deg, ${this.getColor()} 270deg  280deg, ${this.getColor()} 280deg 305deg, ${this.getColor()} 305deg 345deg, ${this.getColor()} 345deg 360deg  )` }
+
+        return { "background": `conic-gradient(${this.data.firstHalfGradientProperty} white 90deg 270deg, ${this.data.secondHalfGradientProperty})` }
 
     }
 }
@@ -107,4 +135,6 @@ export interface SplitDataView {
     limited: number;
     firstHalf?: HalfPieDataView[];
     secondHalf?: HalfPieDataView[];
+    firstHalfGradientProperty?: string;
+    secondHalfGradientProperty?: string;
 }
