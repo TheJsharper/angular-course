@@ -8,16 +8,16 @@ import { getRandMinMax } from 'src/db-data';
     styleUrls: ['./app.half-pie.component.scss']
 })
 export class AppHalfPieComponent implements OnInit {
-
-    @Input("values") values: HalfPieValue[];
-
+    
+    @Input("values")values:HalfPieValue[];
+    
     data: SplitDataView;
 
 
     ngOnInit(): void {
 
-        if (!this.values)
-            this.values = this.getValues();
+        if(!this.values)
+        this.values = this.getValues();
 
         const limited: number = this.getLimited(this.values);
 
@@ -129,9 +129,10 @@ export class AppHalfPieComponent implements OnInit {
         return { "background": `conic-gradient(${this.data.firstHalfGradientProperty} white 90deg 270deg, ${this.data.secondHalfGradientProperty})` }
 
     }
-    getTitlePosition(index: number): { [key: string]: any } {
-        const xPoint: number = 76 * index;
-        return { 'transform': `translate(${xPoint}px, -60px) rotate(-70deg)`, }
+    getTitlePosition(index:number):{[key:string]:any}{
+        const xPoint:number = 75 *index;
+       // return {'transform':`translate(${xPoint}px, -60px) rotate(-70deg)`, }
+       return {'transform':`translate(${xPoint}px, 0px) rotate(-70deg)`, }
     }
 }
 
